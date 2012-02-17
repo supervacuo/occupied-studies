@@ -1,0 +1,180 @@
+/* Remember, 16px base font size and 20px vertical measure */
+
+body {
+	background: #353535 url(../img/bg_pattern_zebra.png);
+}
+
+nav {
+	position: fixed;
+	padding: 0.5em;
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.9);
+	-webkit-transition: background-color 0.2s ease;
+	-moz-transition: background-color 0.2s ease;
+	-o-transition: background-color 0.2s ease;
+	transition: background-color 0.2s ease;
+}
+
+nav:hover {
+	background-color: white;
+}
+
+nav#index {
+	top: 2em;
+	right: -0.6em;
+}
+
+nav#next {
+	top: 80%;
+	right: 2em;
+}
+
+nav#previous {
+	top: 8em;
+	left: 2em;
+}
+
+nav#page-up {
+	display: none;
+}
+
+nav#page-down {
+	bottom: 0;
+	right: 0;
+}
+
+	nav a {
+		color: black;
+		text-decoration: none;
+	}
+
+	nav#index a {
+			text-indent: -5000px;
+			height: 80px;
+			width: 209px;
+			display: block;
+			background: transparent url("../img/occupied-studies_logo_sm.png") no-repeat scroll 0 0 ;
+	}
+
+	nav div {
+		text-align: center;
+		font-style: italic;
+		color: #555;
+	}
+
+article {
+	position: relative;
+	width: 33em;
+	margin: 0 auto;
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 1em;
+	-webkit-box-shadow: 0px 0px 5px 2px #333;
+	-moz-box-shadow: 0px 0px 5px 2px #333;
+	box-shadow: 0px 0px 5px 2px #333;
+	z-index: 1;
+}
+
+	article nav {
+		position: relative;
+		background: transparent;
+	}
+
+	article nav:hover {
+		background: transparent;
+	}
+
+		article nav ul {
+			list-style-type: none;
+			margin: 1em 0;
+			overflow: auto;
+		}
+
+			article nav ul li {
+				width: 60%;
+				margin: 1em 0;
+			}
+
+			article nav ul li.next {
+				float:right;
+			}
+
+	article header {
+		margin-left: -1em;
+		background: transparent none no-repeat scroll -10px -10px;
+		width: 35em;
+		height: 25em; /* 200px @ default font size */
+		padding-top: 1.25em
+	}
+
+		article header h1 {
+			position: relative;
+			background-color: black;
+			font-size: 3em;
+			color: white;
+			margin: -0.5em 0 0 -1em;
+			padding: 0.25em 0.5em;
+			width: 9em;
+			z-index: 2;
+		}
+
+		article header h2 {
+			position: relative;
+			background-color: white;
+			font-size: 1.6em;
+			color: black;
+			font-family: 'HelveticaCE35ThinRegular';
+			width: 14em;
+			text-align: left;
+			margin: 10.7em 0 0 7.5em;
+			padding: 0.5em;
+			z-index: 1;
+		}
+
+	article p {
+		margin-top: 2.5em;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+	}
+
+	article p + p {
+		margin-top: 0;
+	}
+
+	article p.fin {
+		text-align: center;
+	}
+	
+	article p.strapline {
+		overflow: auto;
+		margin-bottom: 0;
+	}
+
+		article p.strapline img {
+			float: left;
+			margin-right: 1em;
+			width: 92px;
+		}
+
+	article blockquote.pull {
+		width: 30%;
+		float: right;
+		font-size: 125%;
+		position: relative;
+	}
+
+	article blockquote.pull:before {
+		content: "\201C";
+		position: absolute;
+		top: -0.45em;
+		left: -0.45em;
+		font-size: 5em;
+		color: #777;
+	}
+	article blockquote.pull:after {
+		content: "\201D";
+		position: absolute;
+		font-size: 5em;
+		color: #777;
+	}

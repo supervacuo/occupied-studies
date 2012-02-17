@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% block starthead %}{% endblock starthead %}
+  <meta charset="{{ resource.meta.charset }}">
+
+  <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+  <meta name="description" content="{{ resource.meta.description }}">
+  <meta name="author" content="{{ resource.meta.author }}">
+
+  {% block favicons %}
+  <!-- Place favicon.ico & apple-touch-icon.png
+        in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
+  <link rel="apple-touch-icon" href="{{ media_url('/apple-touch-icon.png') }}">
+  {% endblock favicons %}
+
+  {% block css %}
+  <link rel="stylesheet" href="{{ media_url('css/master.css') }}">
+  {% endblock css %}
+
+  {% block js %}
+	<script type="text/javascript" src="{{ media_url('js/jquery-1.7.1.min.js')}}"></script>
+	<script type="text/javascript" src="{{ media_url('js/jquery-ui-1.8.16.custom.min.js')}}"></script>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  {% endblock js %}
+  {% block endhead %}{% endblock endhead %}
+</head>
+<body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+  {% block content %}
+  {% endblock content%}
+</body>
+<footer>
+	<h2>Journal for Occupied Studies</h2>
+	<p>
+		The first print edition of the Journal for Occupied Studies will be many
+		variations of passages of Lorem Ipsum available, but the majority have
+		suffered alteration in some form, by injected humour, or randomised words
+		which don't look even slightly believable.
+	</p>
+	<p>
+		We need volunteers, please <a href='#contact'>get in touch</a> if you can:
+	</p>
+	<ul>
+		<li>Fight a bear whilst reading Weber</li>
+		<li>Edit articles written in Linear B and/or Klingon</li>
+		<li>Photoshop pictures of pepper spray cop</li>
+		<li>Write good jokes about Bloomberg</li>
+	</ul>
+	<ul id='social_media'>
+		<li><a href='http://twitter.com/occupiedstudies' id='twitter'>Twitter</a></li>
+		<li><a href='http://facebook.com/occupiedstudies' id='facebook'>Facebook</a></li>
+	</ul>
+	<p>
+		All content is licenced under Creative Commons CC-BY-SA, except where
+		otherwise specified.
+	</p>
+	<p>
+	To get in touch, e-mail <a
+		href='mailto:enquiries@occupiedstudies.org'>enquiries@occupiedstudies.org</a>.
+</footer>
+</html>

@@ -1,0 +1,87 @@
+{% extends "base.j2" %}
+
+{% block css %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ media_url('css/article.css') }}" />
+{% endblock css %}
+{% block js %}
+{{ super() }}
+<script type="text/javascript" src="{{ media_url('js/sweet-justice.min.js') }}"></script>
+<script type="text/javascript" src="{{ media_url('js/scroll-startstop.events.jquery.js') }}"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+			$('article p').each(function() {
+				$(this).addClass('sweet-justice');
+			});
+			$(document.documentElement).keydown(function (event) {
+				if (event.keyCode == 32 || event.keyCode == 34) {
+					// pressed space or pgdn
+					$('html,body').animate({	
+						scrollTop: $('html,body').scrollTop() + $(window).height() * 0.95
+					}, 1000, "easeInOutQuad");
+				} else if (event.keyCode == 33) {
+					// pressed pgup
+					$('html,body').animate({	
+						scrollTop: Math.max($('html,body').scrollTop() - $(window).height() * 0.95, 0)
+					}, 1000, "easeInOutQuad");
+				}
+			});
+			$(window).bind('scrollstop', function() {
+				if ($(window).scrollTop() > $('article p').first().position().top) {
+					$('#page-up').fadeIn(1000, "easeInOutQuad");
+				} else {
+					$('#page-up').fadeOut(1000, "easeInOutQuad");
+				}
+				if ($(window).scrollTop() > $(document).height() - $(window).height() - $('footer').height()) {
+					$('#page-down').fadeOut(1000, "easeInOutQuad");
+				} else {
+					$('#page-down').fadeIn(1000, "easeInOutQuad");
+				}
+			});
+			$('#page-up a').click(function(event) {
+				$('html,body').animate({	
+					scrollTop: Math.max($('html,body').scrollTop() - $(window).height() * 0.95, 0)
+				}, 1000, "easeInOutQuad");
+				event.preventDefault();
+			});
+	});
+</script>
+{% endblock js %}
+{% block content %}
+<nav id='index'>
+<a href='/'>Journal for Occupied Studies</a><br />
+</nav>
+<nav id='page-up'>
+	<a href='#'>Up &uarr;</a>
+</nav>
+<nav id='page-down'>
+	<a href='#'>Down &darr;</a>
+</nav>
+<article>
+	<nav>
+		<ul>
+			{% if resource.prev_by_time %}
+			<li>
+				<a href='{{ resource.prev_by_time.url }}'>&larr; {{ resource.prev_by_time.meta.title }}</a><br />
+				<div>(prev article)</div>
+			</li>
+			{% endif %}
+			{% if resource.next_by_timemeta.next %}
+			<li class='next'>
+				<a href='{{ resource.next_by_time.url }}'>{{ resource.prev_by_time.title }} &rarr;</a><br />
+				<div>(next article)</div>
+			</li>
+			{% endif %}
+		</ul>
+	</nav>
+	<header style='background-image: url({{ media_url('img/article/' + resource.meta.image) }});'>
+		<h1>{{ resource.meta.title }}</h1>
+		<h2>{{ resource.meta.subtitle }}</h2>
+	</header>
+	{% filter markdown|typogrify -%}
+	{% mark post -%}
+	{% block post -%}{%- endblock %}
+	{%- endmark %}
+	{%- endfilter %}
+</article>
+{% endblock content %}

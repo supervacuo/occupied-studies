@@ -1,0 +1,191 @@
+{% extends "base.j2" %}
+{% block js %}
+	{{ super() }}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('div#index ol li a, p.top a, p.next a').live('click tap', function() {
+				var destination = $(this).attr("href");
+				$('html,body').animate({	
+					scrollTop: $(destination).offset().top + 1
+				}, 1000, "easeInOutQuad");
+			});
+		});
+	</script>
+{% endblock js %}
+{% block content %}
+	<div id='index' class='page'>
+		<h1>Journal of Occupied Studies</h1>	
+		<ol>
+			<li id='nav_strategy'><a href='#strategy'>Strategy</a></li>
+			<li id='nav_iconography'><a href='#iconography'>Iconography</a></li>
+			<li id='nav_history'><a href='#history'>History</a></li>
+			<li id='nav_people'><a href='#people'>People</a></li>
+			<li id='nav_critique'><a href='#critique'>Critique</a></li>
+			<li id='nav_resources'><!--<a href='#resources'>Resources</a>--><em>?</em></li>
+		</ol>
+		<p id='copyright'>
+			Some rights reserved (CC-BY-SA)
+		</p>
+	</div>
+	<div id='strategy'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>Strategy</h2>
+		<blockquote class='preamble'>
+			Maecenas justo tortor, ullamcorper vel porta ut
+			<span>&mdash; Samuel L. Jackson</span>
+		</blockquote>
+		<hr class='lock' />
+		<div class='article'>
+			<img src='{{ media_url('img/profile/tim_gee.jpg') }}' alt='James Brown' />
+			<h3><a href='lines-of-dissent'>Lines of dissent</a></h3>
+			<p class='byline'>Tim Gee, Friends of the Earth</p>
+			<p>
+				Where did we come from and what can we learn? An analysis of London's
+				OccupyLSX in the context of the now-disbanded UK "Camp for Climate Action" network
+			</p>
+			<p class='read_more'>
+				<a href='/gonna-get-in-water'>Read more &rarr;</a>
+			</p>
+		</div>
+		<div class='article right'>
+			<img src='{{ media_url('img/profile/slavoj_zizek.jpg') }}' alt='Slavoj Žižek' />
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>Slavoj Žižek, European Graduate School</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+			</p>
+			<p class='read_more'>
+				<a href='/revolutionary-beard'>Read more &rarr;</a>
+			</p>
+		</div>
+		<p class='next'><a href='#iconography'>Iconography &darr;</a></p>
+	</div>
+	<div id='iconography'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>Iconography</h2>
+		<div class='article first'>
+			<img src='{{ media_url('img/profile/pope_benedict.jpg') }}' alt='Pope Benedit'>
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>Pope Benedit, Vatican City</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+
+				There are many variations of passages of Lorem Ipsum available
+			</p>
+			<p class='read_more'>
+				<a href='/does-pope-shit-in-woods'>Read more &rarr;</a>
+			</p>
+		</div>
+		<hr class='gear' />
+		<div class='article right'>
+			<img src='{{ media_url('img/profile/sophie_lewis.jpg') }}' alt='Sophie Lewis' />
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>Sophie Lewis, The New School</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+
+				There are many variations of passages of Lorem Ipsum available
+			</p>
+			<p class='read_more'>
+				<a href='/taking-bull-by-horns'>Read more &rarr;</a>
+			</p>
+		</div>
+		<p class='next'><a href='#history'>History &darr;</a></p>
+	</div>
+	<div id='history'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>History</h2>
+		<img id='timeline' src='{{ media_url('img/timeline.png') }}' alt='Occupy Wall Street timeline' />
+		<div class='article'>
+			<img src='{{ media_url('img/profile/james_brown.jpg') }}' alt='James Brown' />
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>James Brown, Brown Institute</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+			</p>
+			<p class='read_more'>
+				<a href='/gonna-get-in-water'>Read more &rarr;</a>
+			</p>
+		</div>
+		<p class='next'><a href='#people'>People &darr;</a></p>
+	</div>
+	<div id='people'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>People</h2>
+		<div class='article first'>
+			<img src='{{ media_url('img/profile/naomi_wolf.jpg') }}' alt='Naomi Wolf'>
+			<h3>Speaking for anyone</h3>
+			<p class='byline'>Naomi Wolf, The 1970s</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+			</p>
+			<p class='read_more'>
+				<a href='/speaking-for-anyone'>Read more &rarr;</a>
+			</p>
+		</div>
+		<div class='article right'>
+			<img src='{{ media_url('img/profile/milton_freidman.jpg') }}' alt='Milton Friedman' />
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>Milton Friedman, University of Chicago</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+			</p>
+			<p class='read_more'>
+				<a href='/what-economic-crisis'>Read more &rarr;</a>
+			</p>
+		</div>
+		<p class='next'><a href='#critique'>Critique &darr;</a></p>
+	</div>
+	<div id='critique'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>Critique</h2>
+		<blockquote class='preamble'>
+			Maecenas justo tortor, ullamcorper vel porta ut
+			<span>&mdash; Samuel L. Jackson</span>
+		</blockquote>
+		<hr class='gear' />
+		<div class='article'>
+			<img src='{{ media_url('img/profile/milton_freidman.jpg') }}' alt='Milton Friedman' />
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>Milton Friedman, University of Chicago</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+			</p>
+			<p class='read_more'>
+				<a href='/what-economic-crisis'>Read more &rarr;</a>
+			</p>
+		</div>
+		<div class='article right'>
+			<img src='{{ media_url('img/profile/slavoj_zizek.jpg') }}' alt='Slavoj Žižek' />
+			<h3>Lorem ipsum dolor sit amet</h3>
+			<p class='byline'>Slavoj Žižek, European Graduate School</p>
+			<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It
+				has roots in a piece of classical Latin literature from 45 BC, making it
+				over 2000 years old. 
+			</p>
+			<p class='read_more'>
+				<a href='/revolutionary-beard'>Read more &rarr;</a>
+			</p>
+		</div>
+		<!--<p class='next'><a href='#resources'>Resources &darr;</a></p>-->
+	</div>
+	<!--<div id='resources'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>Resources</h2>
+	</div>-->
+% endblock content %}
