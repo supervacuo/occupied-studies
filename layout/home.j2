@@ -38,31 +38,19 @@
 			<span>&mdash; David Graeber</span>
 		</blockquote>
 		<hr class='lock' />
-		<div class='article'>
-			<img src='{{ media_url('img/profile/tim_gee.jpg') }}' alt='James Brown' />
-			<h3><a href='lines-of-dissent'>Lines of dissent</a></h3>
-			<p class='byline'>Tim Gee, Friends of the Earth</p>
+		{% for resource in site.tagger.tags.strategy.resources|sort(attribute='meta.created',reverse=true) %}
+		<div class='article{{ loop.cycle('', ' right') }}'>
+			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
+			<h3><a href='{{ resource.url }}'>{{ resource.meta.title }}</a></h3>
+			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
 			<p>
-				Where did we come from and what can we learn? An analysis of London's
-				OccupyLSX in the context of the now-disbanded UK "Camp for Climate Action" network
+				{{ resource.meta.description|markdown }}
 			</p>
 			<p class='read_more'>
-				<a href='/gonna-get-in-water'>Read more &rarr;</a>
+				<a href='{{ resource.url }}'>Read more &rarr;</a>
 			</p>
 		</div>
-		<div class='article right'>
-			<img src='{{ media_url('img/profile/slavoj_zizek.jpg') }}' alt='Slavoj Žižek' />
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>Slavoj Žižek, European Graduate School</p>
-			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
-			</p>
-			<p class='read_more'>
-				<a href='/revolutionary-beard'>Read more &rarr;</a>
-			</p>
-		</div>
+		{% endfor %}
 		<p class='next'><a href='#iconography'>Iconography &darr;</a></p>
 	</div>
 	<div id='iconography'>
