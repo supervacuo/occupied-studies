@@ -30,10 +30,11 @@ sorter:
 tagger:
     sorter: time
     archives:
-        blog:
-            source: blog
-            target: blog/tags
-            template: tagged_posts.j2
+        article:
+            source: articles
+            target: articles/tags
+            template: tagged_articles.j2
             archive_extension: html
             meta:
                 listable: false
+    sorter: time
