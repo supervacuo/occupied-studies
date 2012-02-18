@@ -62,13 +62,13 @@
 		<ul>
 			{% if resource.prev_by_time %}
 			<li>
-				<a href='{{ resource.prev_by_time.url }}'>&larr; {{ resource.prev_by_time.meta.title }}</a><br />
+				<a href='/{{ resource.prev_by_time.url }}'>&larr; {{ resource.prev_by_time.meta.title }}</a><br />
 				<div>(prev article)</div>
 			</li>
 			{% endif %}
-			{% if resource.next_by_timemeta.next %}
+			{% if resource.next_by_time %}
 			<li class='next'>
-				<a href='{{ resource.next_by_time.url }}'>{{ resource.prev_by_time.title }} &rarr;</a><br />
+				<a href='/{{ resource.next_by_time.url }}'>{{ resource.next_by_time.meta.title }} &rarr;</a><br />
 				<div>(next article)</div>
 			</li>
 			{% endif %}
@@ -76,7 +76,9 @@
 	</nav>
 	<header style='background-image: url({{ media_url('img/article/' + resource.meta.image) }});'>
 		<h1>{{ resource.meta.title }}</h1>
+		{% if resource.meta.subtitle %}
 		<h2>{{ resource.meta.subtitle }}</h2>
+		{% endif %}
 	</header>
 	{% filter markdown|typogrify -%}
 	{% mark post -%}
