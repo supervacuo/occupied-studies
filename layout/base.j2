@@ -21,6 +21,7 @@
 
   {% block js %}
 	<script type="text/javascript" src="{{ media_url('js/jquery-1.7.1.min.js')}}"></script>
+	<script type="text/javascript" src="{{ media_url('js/sweet-justice.min.js') }}"></script>
 	<script type="text/javascript" src="{{ media_url('js/jquery-ui-1.8.16.custom.min.js')}}"></script>
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,7 +29,7 @@
   {% endblock js %}
   {% block endhead %}{% endblock endhead %}
 </head>
-<body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+<body>
   {% block content %}
   {% endblock content%}
 </body>

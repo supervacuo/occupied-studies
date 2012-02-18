@@ -111,11 +111,15 @@ p.next {
 }
 
 blockquote.preamble {
-	width: 100%;
+	width: 65%;
 	text-align: center;
-	margin: 2.5em 0;
+	margin: 2.5em auto;
 	font-family: 'HelveticaCE35ThinRegular', 'Helvetica', 'Arial', sans-serif;
 	font-size: 1.25em;
+}
+
+#strategy blockquote.preamble {
+	margin: 0.75em auto;
 }
 
 	blockquote.preamble span {
