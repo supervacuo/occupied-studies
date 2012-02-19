@@ -184,3 +184,16 @@ article {
 		font-size: 5em;
 		color: #777;
 	}
+
+	article div.footnote {
+		font-size: 0.75em;
+		line-height: 1.66; /* 20px */
+	}
+
+		article div.footnote hr {
+			height: 0;
+		}
+
+		article div.footnote p {
+			line-height: inherit;
+			margin: 0.84em 0;
