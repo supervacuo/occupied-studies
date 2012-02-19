@@ -137,6 +137,12 @@ article {
 		hyphens: auto;
 	}
 
+	article header + p:first-letter {
+		font-size: 3em;
+		float: left;
+		font-family: 'HelveticaCE35ThinRegular';
+		margin: 0.05em 0.05em 0 0;
+	}
 
 	article p.fin {
 		text-align: center;
