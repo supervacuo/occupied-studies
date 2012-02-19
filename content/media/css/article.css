@@ -100,7 +100,7 @@ article {
 			}
 
 	article header {
-		margin-left: -1em;
+		margin: 0 0 2.5em -1em;
 		background: transparent none no-repeat scroll -10px -10px;
 		width: 35em;
 		height: 25em; /* 200px @ default font size */
@@ -132,15 +132,11 @@ article {
 		}
 
 	article p {
-		margin-top: 2.5em;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;
 	}
 
-	article p + p {
-		margin-top: 0;
-	}
 
 	article p.fin {
 		text-align: center;
@@ -156,6 +152,10 @@ article {
 			margin-right: 1em;
 			width: 92px;
 		}
+
+	article h3 {
+		font-family: 'HelveticaCE35ThinRegular';
+	}
 
 	article blockquote.pull {
 		width: 30%;
