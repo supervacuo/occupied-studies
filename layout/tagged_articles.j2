@@ -1,0 +1,9 @@
+{% extends "base.j2" %}
+{% from "macros.j2" import render_post_tile with context %}
+
+{% block content %}
+<h2>{{ tag.name }}</h2>
+{% for resource in walker() -%}
+	{{ render_post_tile(resource) }}
+{% endfor %}
+{% endblock content %}
