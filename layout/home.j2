@@ -41,7 +41,7 @@
 		{% for resource in site.tagger.tags.strategy.resources|sort(attribute='meta.created',reverse=true) %}
 		<div class='article{{ loop.cycle('', ' right') }}'>
 			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
-			<h3><a href='{{ resource.url }}'>{{ resource.meta.title }}</a></h3>
+			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
 			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
 			<p>
 				{{ resource.meta.description|markdown }}
@@ -56,87 +56,59 @@
 	<div id='iconography'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>Iconography</h2>
-		<div class='article first'>
-			<img src='{{ media_url('img/profile/pope_benedict.jpg') }}' alt='Pope Benedit'>
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>Pope Benedit, Vatican City</p>
+		{% for resource in site.tagger.tags.iconography.resources|sort(attribute='meta.created',reverse=true) %}
+		<div class='article {{ loop.cycle('first', ' right') }} first'>
+			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
+			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
+			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
 			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
-
-				There are many variations of passages of Lorem Ipsum available
+				{{ resource.meta.description|markdown }}
 			</p>
 			<p class='read_more'>
-				<a href='/does-pope-shit-in-woods'>Read more &rarr;</a>
+				<a href='{{ resource.url }}'>Read more &rarr;</a>
 			</p>
 		</div>
+		{% if not loop.last or loop.length == 1 %}
 		<hr class='gear' />
-		<div class='article right'>
-			<img src='{{ media_url('img/profile/sophie_lewis.jpg') }}' alt='Sophie Lewis' />
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>Sophie Lewis, The New School</p>
-			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
-
-				There are many variations of passages of Lorem Ipsum available
-			</p>
-			<p class='read_more'>
-				<a href='/taking-bull-by-horns'>Read more &rarr;</a>
-			</p>
-		</div>
+		{% endif %}
+		{% endfor %}
 		<p class='next'><a href='#history'>History &darr;</a></p>
 	</div>
 	<div id='history'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>History</h2>
 		<img id='timeline' src='{{ media_url('img/timeline.png') }}' alt='Occupy Wall Street timeline' />
-		<div class='article'>
-			<img src='{{ media_url('img/profile/james_brown.jpg') }}' alt='James Brown' />
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>James Brown, Brown Institute</p>
+		{% with resource=site.tagger.tags.history.resources|sort(attribute='meta.created',reverse=true)|first %}
+		<div class='article first'>
+			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
+			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
+			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
 			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
+				{{ resource.meta.description|markdown }}
 			</p>
 			<p class='read_more'>
-				<a href='/gonna-get-in-water'>Read more &rarr;</a>
+				<a href='{{ resource.url }}'>Read more &rarr;</a>
 			</p>
 		</div>
+		{% endwith %}
 		<p class='next'><a href='#people'>People &darr;</a></p>
 	</div>
 	<div id='people'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>People</h2>
-		<div class='article first'>
-			<img src='{{ media_url('img/profile/naomi_wolf.jpg') }}' alt='Naomi Wolf'>
-			<h3>Speaking for anyone</h3>
-			<p class='byline'>Naomi Wolf, The 1970s</p>
+		{% for resource in site.tagger.tags.people.resources|sort(attribute='meta.created',reverse=true) %}
+		<div class='article {{ loop.cycle('first', 'right') }}'>
+			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
+			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
+			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
 			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
+				{{ resource.meta.description|markdown }}
 			</p>
 			<p class='read_more'>
-				<a href='/speaking-for-anyone'>Read more &rarr;</a>
+				<a href='{{ resource.url }}'>Read more &rarr;</a>
 			</p>
 		</div>
-		<div class='article right'>
-			<img src='{{ media_url('img/profile/milton_freidman.jpg') }}' alt='Milton Friedman' />
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>Milton Friedman, University of Chicago</p>
-			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
-			</p>
-			<p class='read_more'>
-				<a href='/what-economic-crisis'>Read more &rarr;</a>
-			</p>
-		</div>
+		{% endfor %}
 		<p class='next'><a href='#critique'>Critique &darr;</a></p>
 	</div>
 	<div id='critique'>
@@ -147,32 +119,19 @@
 			<span>&mdash; Samuel L. Jackson</span>
 		</blockquote>
 		<hr class='gear' />
-		<div class='article'>
-			<img src='{{ media_url('img/profile/milton_freidman.jpg') }}' alt='Milton Friedman' />
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>Milton Friedman, University of Chicago</p>
+		{% for resource in site.tagger.tags.critique.resources|sort(attribute='meta.created',reverse=true) %}
+		<div class='article{{ loop.cycle('', ' right') }}'>
+			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
+			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
+			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
 			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
+				{{ resource.meta.description|markdown }}
 			</p>
 			<p class='read_more'>
-				<a href='/what-economic-crisis'>Read more &rarr;</a>
+				<a href='{{ resource.url }}'>Read more &rarr;</a>
 			</p>
 		</div>
-		<div class='article right'>
-			<img src='{{ media_url('img/profile/slavoj_zizek.jpg') }}' alt='Slavoj Žižek' />
-			<h3>Lorem ipsum dolor sit amet</h3>
-			<p class='byline'>Slavoj Žižek, European Graduate School</p>
-			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It
-				has roots in a piece of classical Latin literature from 45 BC, making it
-				over 2000 years old. 
-			</p>
-			<p class='read_more'>
-				<a href='/revolutionary-beard'>Read more &rarr;</a>
-			</p>
-		</div>
+		{% endfor %}
 		<!--<p class='next'><a href='#resources'>Resources &darr;</a></p>-->
 	</div>
 	<!--<div id='resources'>
