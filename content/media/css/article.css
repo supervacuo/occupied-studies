@@ -50,8 +50,9 @@ nav#page-down {
 
 	nav#index a {
 			text-indent: -5000px;
-			height: 80px;
-			width: 209px;
+			width: 132px;
+			height: 52px;
+			margin: 1em 2em 1em 1em;
 			display: block;
 			background: transparent url("../img/occupied-studies_logo_sm.png") no-repeat scroll 0 0 ;
 	}
