@@ -418,35 +418,40 @@ footer {
 			padding-right: 1em;
 		}
 
-	footer ul#social_media {
-		padding: 0;
+			footer ul li a {
+				color: white;
+			}
+
+	footer nav#social_media {
+		width: 900px;
+		margin: -0.625em auto 0.625em auto;
 	}
 
-		footer ul#social_media li {
+		footer nav#social_media a {
 			float: right;
 		}
 
-		footer ul#social_media li:before {
-			content: none;
+		footer nav#social_media a {
+			height: 32px;
+			width: 32px;
+			display: block;
+			text-indent: -9999px;
+			background: transparent none no-repeat scroll 0 0;
+			outline: none;
 		}
 
-			footer ul#social_media li a {
-				height: 64px;
-				width: 64px;
-				display: block;
-				text-indent: -9999px;
-				background: transparent none no-repeat scroll 0 0;
-				outline: none;
-			}
+		footer nav#social_media a:hover {
+			background-position: 0 -32px;
+		}
 
-			footer ul#social_media li a:hover {
-				background-position: 0 -61px;
-			}
+		footer nav#social_media a#tumblr {
+			background-image: url(../img/icons/tumblr.png);
+		}
 
-			footer ul#social_media li a#facebook {
-				background-image: url(../img/icons/black-08.png);
-			}
+		footer nav#social_media a#facebook {
+			background-image: url(../img/icons/black-08.png);
+		}
 
-			footer ul#social_media li a#twitter {
-				background-image: url(../img/icons/black-13.png);
-			}
+		footer nav#social_media a#twitter {
+			background-image: url(../img/icons/black-13.png);
+		}
