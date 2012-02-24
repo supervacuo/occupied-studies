@@ -1,4 +1,5 @@
 {% extends "base.j2" %}
+{% from "macros.j2" import render_post_tile with context %}
 {% block js %}
 	{{ super() }}
 	<script type="text/javascript">
@@ -39,17 +40,7 @@
 		</blockquote>
 		<hr class='lock' />
 		{% for resource in site.tagger.tags.strategy.resources|sort(attribute='meta.created',reverse=true) %}
-		<div class='article{{ loop.cycle('', ' right') }}'>
-			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
-			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
-			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
-			<p>
-				{{ resource.meta.description|markdown }}
-			</p>
-			<p class='read_more'>
-				<a href='{{ resource.url }}'>Read more &rarr;</a>
-			</p>
-		</div>
+		{{ render_post_tile(resource, 'right' if not loop.index % 2) }}
 		{% endfor %}
 		<p class='next'><a href='#iconography'>Iconography &darr;</a></p>
 	</div>
@@ -57,17 +48,7 @@
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>Iconography</h2>
 		{% for resource in site.tagger.tags.iconography.resources|sort(attribute='meta.created',reverse=true) %}
-		<div class='article {{ loop.cycle('first', ' right') }} first'>
-			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
-			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
-			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
-			<p>
-				{{ resource.meta.description|markdown }}
-			</p>
-			<p class='read_more'>
-				<a href='{{ resource.url }}'>Read more &rarr;</a>
-			</p>
-		</div>
+		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
 		{% if not loop.last or loop.length == 1 %}
 		<hr class='gear' />
 		{% endif %}
@@ -79,17 +60,7 @@
 		<h2>History</h2>
 		<img id='timeline' src='{{ media_url('img/timeline.png') }}' alt='Occupy Wall Street timeline' />
 		{% with resource=site.tagger.tags.history.resources|sort(attribute='meta.created',reverse=true)|first %}
-		<div class='article first'>
-			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
-			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
-			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
-			<p>
-				{{ resource.meta.description|markdown }}
-			</p>
-			<p class='read_more'>
-				<a href='{{ resource.url }}'>Read more &rarr;</a>
-			</p>
-		</div>
+		{{ render_post_tile(resource, 'first') }}
 		{% endwith %}
 		<p class='next'><a href='#people'>People &darr;</a></p>
 	</div>
@@ -97,17 +68,7 @@
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>People</h2>
 		{% for resource in site.tagger.tags.people.resources|sort(attribute='meta.created',reverse=true) %}
-		<div class='article {{ loop.cycle('first', 'right') }}'>
-			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
-			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
-			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
-			<p>
-				{{ resource.meta.description|markdown }}
-			</p>
-			<p class='read_more'>
-				<a href='{{ resource.url }}'>Read more &rarr;</a>
-			</p>
-		</div>
+		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
 		{% endfor %}
 		<p class='next'><a href='#critique'>Critique &darr;</a></p>
 	</div>
@@ -120,22 +81,7 @@
 		</blockquote>
 		<hr class='gear' />
 		{% for resource in site.tagger.tags.critique.resources|sort(attribute='meta.created',reverse=true) %}
-		<div class='article{{ loop.cycle('', ' right') }}'>
-			<img src='{{ media_url('img/profile/'+resource.meta.profile_img) }}' alt='{{ resource.meta.author }}' />
-			<h3><a href='{{ resource.url }}'>{{ resource.meta.title|e }}</a></h3>
-			<p class='byline'>{{ resource.meta.author }}, {{ resource.meta.organisation }}</p>
-			<p>
-				{{ resource.meta.description|markdown }}
-			</p>
-			<p class='read_more'>
-				<a href='{{ resource.url }}'>Read more &rarr;</a>
-			</p>
-		</div>
+		{{ render_post_tile(resource, 'right' if not loop.index % 2) }}
 		{% endfor %}
-		<!--<p class='next'><a href='#resources'>Resources &darr;</a></p>-->
 	</div>
-	<!--<div id='resources'>
-		<p class='top'><a href='#index'>&uarr; Top</a></p>
-		<h2>Resources</h2>
-	</div>-->
 {% endblock content %}

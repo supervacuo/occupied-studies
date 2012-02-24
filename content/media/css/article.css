@@ -100,7 +100,7 @@ article {
 			}
 
 	article header {
-		margin-left: -1em;
+		margin: 0 0 2.5em -1em;
 		background: transparent none no-repeat scroll -10px -10px;
 		width: 35em;
 		height: 25em; /* 200px @ default font size */
@@ -132,14 +132,16 @@ article {
 		}
 
 	article p {
-		margin-top: 2.5em;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;
 	}
 
-	article p + p {
-		margin-top: 0;
+	article header + p:first-letter {
+		font-size: 3em;
+		float: left;
+		font-family: 'HelveticaCE35ThinRegular';
+		margin: 0.05em 0.05em 0 0;
 	}
 
 	article p.fin {
@@ -156,6 +158,10 @@ article {
 			margin-right: 1em;
 			width: 92px;
 		}
+
+	article h3 {
+		font-family: 'HelveticaCE35ThinRegular';
+	}
 
 	article blockquote.pull {
 		width: 30%;
@@ -178,3 +184,16 @@ article {
 		font-size: 5em;
 		color: #777;
 	}
+
+	article div.footnote {
+		font-size: 0.75em;
+		line-height: 1.66; /* 20px */
+	}
+
+		article div.footnote hr {
+			height: 0;
+		}
+
+		article div.footnote p {
+			line-height: inherit;
+			margin: 0.84em 0;

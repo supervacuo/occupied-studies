@@ -225,12 +225,12 @@ div#index {
 				left: 20%;
 			}
 
-			div#index ol li#nav_people {
+			div#index ol li#nav_history {
 				top: 38%;
 				left: 20%;
 			}
 
-			div#index ol li#nav_history {
+			div#index ol li#nav_people {
 				top: 70%;
 				left: 76%;
 			}
@@ -244,35 +244,6 @@ div#index {
 				top: 78%;
 				left: 76%;
 			}
-			/*div#index ol li#nav_strategy {
-				top: 40%;
-				left: 20%;
-			}
-
-			div#index ol li#nav_iconography {
-				top: 25%;
-				left: 80%;
-			}
-
-			div#index ol li#nav_people {
-				top: 10%;
-				left: 50%;
-			}
-
-			div#index ol li#nav_history {
-				top: 70%;
-				left: 30%;
-			}
-
-			div#index ol li#nav_critique {
-				top: 80%;
-				left: 70%;
-			}
-
-			div#index ol li#nav_resources {
-				top: 90%;
-				left: 55%;
-			}*/
 
 			div#index ol li a {
 				color: black;
