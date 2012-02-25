@@ -15,6 +15,10 @@ nav {
 	transition: background-color 0.2s ease;
 }
 
+	nav a {
+		outline: none;
+	}
+
 nav:hover {
 	background-color: white;
 }
