@@ -430,6 +430,9 @@ footer {
 	footer nav#social_media {
 		width: 900px;
 		margin: -0.625em auto 0.625em auto;
+		background: none;
+		position: relative;
+		padding: 0;
 	}
 
 		footer nav#social_media a {
