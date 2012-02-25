@@ -7,6 +7,7 @@
 {% block js %}
 {{ super() }}
 <script type="text/javascript" src="{{ media_url('js/scroll-startstop.events.jquery.js') }}"></script>
+<script type="text/javascript" src="{{ media_url('js/jquery.fittext.js') }}"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 			$('article p').each(function() {
@@ -43,6 +44,7 @@
 				}, 1000, "easeInOutQuad");
 				event.preventDefault();
 			});
+			$('article header h1').fitText()
 	});
 </script>
 {% endblock js %}

@@ -111,11 +111,10 @@ article {
 		article header h1 {
 			position: relative;
 			background-color: black;
-			font-size: 3em;
 			color: white;
 			margin: -0.5em 0 0 -1em;
 			padding: 0.25em 0.5em;
-			width: 9em;
+			width: 480px;
 			z-index: 2;
 		}
 
