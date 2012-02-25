@@ -160,6 +160,7 @@ div.article {
 
 	div.article.right img {
 		float: right;
+		margin-left: 1em;
 	}
 
 	div.article h3 {
@@ -348,7 +349,7 @@ div#history {
 	div#history div.article {
 		position: absolute;
 		top: 55%;
-		left: 50%;
+		left: 48%;
 	}
 
 		div#history div.article img {
@@ -364,7 +365,7 @@ div#people {
 }
 
 	div#people div.article {
-		width: 650px;
+		width: 670px;
 		margin: 1.25em auto 1.25em auto;
 	}
 
