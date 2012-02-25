@@ -61,11 +61,10 @@ h2 {
 /* page structure hierarchy */
 div#index,
 div#strategy,
-div#iconography,
-div#people,
+div#culture,
 div#history,
-div#critique,
-div#resources {
+div#education,
+div#bodies {
 	width: 100%;
 	padding: 60px 0;
 	position: relative;
@@ -225,30 +224,30 @@ div#index {
 				left: 20%;
 			}
 
-			div#index ol li#nav_iconography {
+			div#index ol li#nav_culture {
 				top: 34%;
 				left: 20%;
 			}
 
-			div#index ol li#nav_history {
+			/* div#index ol li#nav_history {
 				top: 38%;
 				left: 20%;
-			}
+			} */
 
-			div#index ol li#nav_people {
+			div#index ol li#nav_history {
 				top: 70%;
 				left: 76%;
 			}
 
-			div#index ol li#nav_critique {
+			div#index ol li#nav_education {
 				top: 74%;
 				left: 76%;
 			}
 
-			div#index ol li#nav_resources {
+			/* div#index ol li#nav_bodies {
 				top: 78%;
 				left: 76%;
-			}
+			} */
 
 			div#index ol li a {
 				color: black;
@@ -293,7 +292,7 @@ div#strategy {
 	background: #A32729 url(../img/bg_pattern_floral.png);
 }
 
-div#iconography {
+div#culture {
 	height: 745px;
 	background: transparent url(../img/bg_bull_ropes.png) no-repeat scroll bottom right;
 	-webkit-box-shadow: 0px 0px 5px 2px #333;
@@ -302,17 +301,17 @@ div#iconography {
 	z-index: 2;
 }
 
-	div#iconography div.article {
+	div#culture div.article {
 		position: absolute;
 		width: 700px;
 	}
 
-	div#iconography div.article {
+	div#culture div.article {
 		top: 20%;
 		left: 35%;
 	}
 
-	div#iconography hr {
+	div#culture hr {
 		position: absolute;
 		top: 52%;
 		left: 50%;
@@ -320,12 +319,12 @@ div#iconography {
 		margin: 0 0 0 -284px;
 	}
 
-	div#iconography div.article.right {
+	div#culture div.article.right {
 		top: 55%;
 		left: 10%;
 	}
 
-			div#iconography div.article p.read_more a {
+			div#culture div.article p.read_more a {
 			}
 
 div#history {
@@ -346,9 +345,14 @@ div#history {
 		left: 9%;
 	}
 
-	div#history div.article {
+	div#history  div.article {
 		position: absolute;
-		top: 55%;
+		left: 48%;
+		top: 64%;
+	}
+
+	div#history div.article.first {
+		top: 44%;
 		left: 48%;
 	}
 
@@ -358,22 +362,22 @@ div#history {
 			box-shadow: 2px 2px 5px 2px #111;
 		}
 
-div#people {
+div#education {
 	color: #252525;
 	height: 745px;
 	background: #cbcbcb url(../img/bg_repetitive-beats.png) no-repeat scroll 50% 54%;
 }
 
-	div#people div.article {
+	div#education div.article {
 		width: 670px;
 		margin: 1.25em auto 1.25em auto;
 	}
 
-	div#people div.article.right {
+	div#education div.article.right {
 		margin-top: 210px;
 	}
 
-div#critique {
+div#bodies {
 	-webkit-box-shadow: 0px 0px 5px 2px #333;
 	-moz-box-shadow: 0px 0px 5px 2px #333;
 	box-shadow: 0px 0px 5px 2px #333;
@@ -394,7 +398,7 @@ footer {
 		font-size: 1.5em;
 		text-align: left;
 		width: 900px;
-		margin: 5px auto 0.83em auto; /* 5px top margin to account for #critique drop shadow */
+		margin: 5px auto 0.83em auto; /* 5px top margin to account for #bodies drop shadow */
 		padding-top: 1em;
 	}
 

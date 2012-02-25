@@ -19,11 +19,10 @@
 		<h1>Journal of Occupied Studies</h1>	
 		<ol>
 			<li id='nav_strategy'><a href='#strategy'>Strategy</a></li>
-			<li id='nav_iconography'><a href='#iconography'>Iconography</a></li>
+			<li id='nav_culture'><a href='#culture'>Culture</a></li>
 			<li id='nav_history'><a href='#history'>History</a></li>
-			<li id='nav_people'><a href='#people'>People</a></li>
-			<li id='nav_critique'><a href='#critique'>Critique</a></li>
-			<li id='nav_resources'><!--<a href='#resources'>Resources</a>--><em>?</em></li>
+			<li id='nav_education'><a href='#education'>Education</a></li>
+			{# <li id='nav_bodies'><a href='#bodies'>Bodies</a></li> #}
 		</ol>
 		<p id='copyright'>
 			Some rights reserved (CC-BY-SA)
@@ -43,12 +42,12 @@
 		{% for resource in site.tagger.tags.strategy.resources|sort(attribute='meta.created',reverse=true) %}
 		{{ render_post_tile(resource, 'right' if not loop.index % 2) }}
 		{% endfor %}
-		<p class='next'><a href='#iconography'>Iconography &darr;</a></p>
+		<p class='next'><a href='#culture'>Culture &darr;</a></p>
 	</div>
-	<div id='iconography'>
+	<div id='culture'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
-		<h2>Iconography</h2>
-		{% for resource in site.tagger.tags.iconography.resources|sort(attribute='meta.created',reverse=true) %}
+		<h2>Culture</h2>
+		{% for resource in site.tagger.tags.culture.resources|sort(attribute='meta.created',reverse=true) %}
 		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
 		{% if not loop.last or loop.length == 1 %}
 		<hr class='gear' />
@@ -60,29 +59,30 @@
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>History</h2>
 		<img id='timeline' src='{{ media_url('img/timeline.png') }}' alt='Occupy Wall Street timeline' />
-		{% with resource=site.tagger.tags.history.resources|sort(attribute='meta.created',reverse=true)|first %}
-		{{ render_post_tile(resource, 'first') }}
-		{% endwith %}
-		<p class='next'><a href='#people'>People &darr;</a></p>
-	</div>
-	<div id='people'>
-		<p class='top'><a href='#index'>&uarr; Top</a></p>
-		<h2>People</h2>
-		{% for resource in site.tagger.tags.people.resources|sort(attribute='meta.created',reverse=true) %}
+		{% for resource in site.tagger.tags.history.resources|sort(attribute='meta.created',reverse=true) %}
 		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
 		{% endfor %}
-		<p class='next'><a href='#critique'>Critique &darr;</a></p>
+		<p class='next'><a href='#education'>Education &darr;</a></p>
 	</div>
-	<div id='critique'>
+	<div id='education'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
-		<h2>Critique</h2>
+		<h2>Education</h2>
+		{% for resource in site.tagger.tags.education.resources|sort(attribute='meta.created',reverse=true) %}
+		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
+		{% endfor %}
+		{# <p class='next'><a href='#bodies'>Bodies &darr;</a></p> #}
+	</div>
+	{#
+	<div id='bodies'>
+		<p class='top'><a href='#index'>&uarr; Top</a></p>
+		<h2>Bodies</h2>
 		<blockquote class='preamble'>
 			Maecenas justo tortor, ullamcorper vel porta ut
 			<span>&mdash; Samuel L. Jackson</span>
 		</blockquote>
 		<hr class='gear' />
-		{% for resource in site.tagger.tags.critique.resources|sort(attribute='meta.created',reverse=true) %}
+		{% for resource in site.tagger.tags.bodies.resources|sort(attribute='meta.created',reverse=true) %}
 		{{ render_post_tile(resource, 'right' if not loop.index % 2) }}
 		{% endfor %}
-	</div>
+	</div> #}
 {% endblock content %}
