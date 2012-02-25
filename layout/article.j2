@@ -78,7 +78,7 @@
 	<header style='background-image: url({{ media_url('img/article/' + resource.meta.image) }});'>
 		<h1>{{ resource.meta.title }}</h1>
 		{% if resource.meta.subtitle %}
-		<h2>{{ resource.meta.subtitle }}</h2>
+		<h2{% if resource.meta.subtitle|length > 70 %} class='wide'{% endif %}>{{ resource.meta.subtitle }}</h2>
 		{% endif %}
 	</header>
 	{% filter markdown|typogrify -%}
