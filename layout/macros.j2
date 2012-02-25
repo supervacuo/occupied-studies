@@ -4,9 +4,7 @@
 		<img src='{{ media_url('img/profile/'+res.meta.profile_img) }}' alt='{{ res.meta.author }}' />
 		<h3><a href='{{ res.url }}'>{{ res.meta.title|e }}</a></h3>
 		<p class='byline'>{{ res.meta.author }}, {{ res.meta.organisation }}</p>
-		<p>
-			{{ res.meta.description|markdown }}
-		</p>
+		{{ res.meta.description|markdown }}
 		<p class='read_more'>
 			<a href='{{ res.url }}'>Read more &rarr;</a>
 		</p>
