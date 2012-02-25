@@ -64,7 +64,7 @@ div#strategy,
 div#culture,
 div#history,
 div#education,
-div#bodies {
+div#struggle {
 	width: 100%;
 	padding: 60px 0;
 	position: relative;
@@ -229,17 +229,17 @@ div#index {
 				left: 20%;
 			}
 
-			/* div#index ol li#nav_history {
+			div#index ol li#nav_history {
 				top: 38%;
 				left: 20%;
-			} */
+			}
 
-			div#index ol li#nav_history {
+			div#index ol li#nav_education {
 				top: 70%;
 				left: 76%;
 			}
 
-			div#index ol li#nav_education {
+			div#index ol li#nav_struggle {
 				top: 74%;
 				left: 76%;
 			}
@@ -377,7 +377,7 @@ div#education {
 		margin-top: 210px;
 	}
 
-div#bodies {
+div#struggle {
 	-webkit-box-shadow: 0px 0px 5px 2px #333;
 	-moz-box-shadow: 0px 0px 5px 2px #333;
 	box-shadow: 0px 0px 5px 2px #333;

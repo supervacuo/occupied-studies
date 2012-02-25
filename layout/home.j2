@@ -22,7 +22,7 @@
 			<li id='nav_culture'><a href='#culture'>Culture</a></li>
 			<li id='nav_history'><a href='#history'>History</a></li>
 			<li id='nav_education'><a href='#education'>Education</a></li>
-			{# <li id='nav_bodies'><a href='#bodies'>Bodies</a></li> #}
+			<li id='nav_struggle'><a href='#struggle'>Struggle</a></li>
 		</ol>
 		<p id='copyright'>
 			Some rights reserved (CC-BY-SA)
@@ -70,19 +70,18 @@
 		{% for resource in site.tagger.tags.education.resources|sort(attribute='meta.created',reverse=true) %}
 		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
 		{% endfor %}
-		{# <p class='next'><a href='#bodies'>Bodies &darr;</a></p> #}
+		<p class='next'><a href='#struggle'>Struggle &darr;</a></p>
 	</div>
-	{#
-	<div id='bodies'>
+	<div id='struggle'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
-		<h2>Bodies</h2>
+		<h2>Struggle</h2>
 		<blockquote class='preamble'>
 			Maecenas justo tortor, ullamcorper vel porta ut
 			<span>&mdash; Samuel L. Jackson</span>
 		</blockquote>
 		<hr class='gear' />
-		{% for resource in site.tagger.tags.bodies.resources|sort(attribute='meta.created',reverse=true) %}
+		{% for resource in site.tagger.tags.struggle.resources|sort(attribute='meta.created',reverse=true) %}
 		{{ render_post_tile(resource, 'right' if not loop.index % 2) }}
 		{% endfor %}
-	</div> #}
+	</div>
 {% endblock content %}
