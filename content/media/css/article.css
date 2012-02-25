@@ -102,7 +102,7 @@ article {
 
 	article header {
 		margin: 0 0 2.5em -1em;
-		background: transparent none no-repeat scroll -10px -10px;
+		background: transparent none no-repeat scroll 0 0;
 		width: 35em;
 		height: 25em; /* 200px @ default font size */
 		padding-top: 1.25em
