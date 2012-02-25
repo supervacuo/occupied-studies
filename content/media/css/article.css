@@ -144,11 +144,16 @@ article {
 		font-family: 'HelveticaCE35ThinRegular';
 		margin: 0.05em 0.05em 0 0;
 	}
-
-	article p.fin {
+	
+	article hr {
+		color: #555;
 		text-align: center;
 	}
-	
+
+	article hr:before {
+		content: "\2767"; 
+	}
+
 	article p.strapline {
 		overflow: auto;
 		margin-bottom: 0;
