@@ -150,12 +150,12 @@ article {
 		margin: 0.05em 0.05em 0 0;
 	}
 	
-	article hr {
+	article > hr {
 		color: #555;
 		text-align: center;
 	}
 
-	article hr:before {
+	article > hr:before {
 		content: "\2767"; 
 	}
 
@@ -175,8 +175,10 @@ article {
 	}
 
 	article blockquote.pull {
-		width: 30%;
+		width: 40%;
 		float: right;
+		margin-right: 0.5em;
+		margin-left: 2.2em;
 		font-size: 125%;
 		position: relative;
 	}
@@ -192,6 +194,7 @@ article {
 	article blockquote.pull:after {
 		content: "\201D";
 		position: absolute;
+		right: 0;
 		font-size: 5em;
 		color: #777;
 	}
@@ -208,3 +211,4 @@ article {
 		article div.footnote p {
 			line-height: inherit;
 			margin: 0.84em 0;
+		}

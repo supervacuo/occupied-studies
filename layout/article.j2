@@ -13,6 +13,9 @@
 			$('article p').each(function() {
 				$(this).addClass('sweet-justice');
 			});
+			$('article > ol > li, article > ul > li').each(function() {
+				$(this).addClass('sweet-justice');
+			});
 			$(document.documentElement).keydown(function (event) {
 				if (event.keyCode == 32 || event.keyCode == 34) {
 					// pressed space or pgdn
@@ -44,7 +47,7 @@
 				}, 1000, "easeInOutQuad");
 				event.preventDefault();
 			});
-			$('article header h1').fitText()
+			$('article header h1').fitText(1.2)
 	});
 </script>
 {% endblock js %}
