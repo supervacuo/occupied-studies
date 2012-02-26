@@ -93,11 +93,13 @@ article {
 			list-style-type: none;
 			margin: 1em 0;
 			overflow: auto;
+			padding: 0;
 		}
 
 			article nav ul li {
-				width: 60%;
+				width: 70%;
 				margin: 1em 0;
+				text-align: center;
 			}
 
 			article nav ul li.next {
@@ -109,7 +111,8 @@ article {
 		background: transparent none no-repeat scroll 0 0;
 		width: 35em;
 		height: 25em; /* 200px @ default font size */
-		padding-top: 1.25em
+		padding-top: 1.25em;
+		position: relative;
 	}
 
 		article header h1 {
@@ -123,14 +126,15 @@ article {
 		}
 
 		article header h2 {
-			position: relative;
+			position: absolute;
+			bottom: -1em;
+			right: -1em;
 			background-color: white;
 			font-size: 1.6em;
 			color: black;
 			font-family: 'HelveticaCE35ThinRegular';
 			width: 14em;
 			text-align: left;
-			margin: 10.7em 0 0 7.5em;
 			padding: 0.5em;
 			z-index: 1;
 		}
