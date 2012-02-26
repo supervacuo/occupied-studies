@@ -285,6 +285,10 @@ div#index {
 		font-size: 0.75em;
 	}
 
+		div#index p#copyright a {
+			color: black;
+		}
+
 div#strategy {
 	background-color: #a32729;
 	color: white;
