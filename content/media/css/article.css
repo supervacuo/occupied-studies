@@ -157,6 +157,7 @@ article {
 		float: left;
 		font-family: 'HelveticaCE35ThinRegular';
 		margin: 0.05em 0.05em 0 0;
+		line-height: 0.8em;
 	}
 	
 	article > hr {
