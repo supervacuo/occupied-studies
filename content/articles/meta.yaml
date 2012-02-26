@@ -1,3 +1,4 @@
 extends: article.j2
-default_block: post
 listable: true
+use_profile: False
+licence: cc-by-nc-sa

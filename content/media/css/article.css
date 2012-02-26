@@ -108,28 +108,29 @@ article {
 
 	article header {
 		margin: 0 0 2.5em -1em;
-		background: transparent none no-repeat scroll 0 0;
+		background: transparent none no-repeat scroll 0 5em;
 		width: 35em;
-		height: 25em; /* 200px @ default font size */
+		height: 30em; /* 480px @ default font size */
 		padding-top: 1.25em;
 		position: relative;
 	}
 
 		article header h1 {
-			position: relative;
+			position: absolute;
 			background-color: black;
 			color: white;
-			margin: -0.5em 0 0 -1em;
 			padding: 0.25em 0.5em;
 			width: 480px;
 			z-index: 2;
+			margin: 0;
 		}
 
 		article header h2 {
 			position: absolute;
 			bottom: -1em;
 			right: -1em;
-			background-color: white;
+			background-color: rgb(255,255,255);
+			background-color: rgba(255,255,255,0.9);
 			font-size: 1.6em;
 			color: black;
 			font-family: 'HelveticaCE35ThinRegular';
@@ -169,13 +170,62 @@ article {
 
 	article p.strapline {
 		overflow: auto;
-		margin-bottom: 0;
+		margin: 0;
 	}
 
-		article p.strapline img {
+		article p.strapline img#profile {
 			float: left;
 			margin-right: 1em;
 			width: 92px;
+		}
+
+	article p.licence {
+		margin-bottom: -1.33em;
+		padding: 0.5em 1em;
+		color: #CBCBCB;
+		width: 44.7em;
+		margin-left: -1.33em;
+		background-color: #252525;
+		font-size: 0.75em;
+	}
+
+		article p.licence a.cc-by-nc-sa,
+		article p.licence a.cc-by-nc-nd,
+		article p.licence a.cc-by-nc,
+		article p.licence a.cc-by {
+			background: transparent none no-repeat scroll;
+			text-indent: -9999px;
+			display: inline-block;
+			width: 80px;
+			height: 20px;
+			vertical-align: middle;
+		}
+
+		article p.licence a.cc-by-nc-sa {
+			background-image: url(../img/cc-by-nc-sa.gif);
+		}
+
+		article p.licence a.cc-by-nc-nd {
+			background-image: url(../img/cc-by-nc-nd.gif);
+		}
+
+		article p.licence a.cc-by-nc {
+			background-image: url(../img/cc-by-nc.gif);
+			width: 60px;
+		}
+
+		article p.licence a.cc-by {
+			background-image: url(../img/cc-by.gif);
+			width: 40px;
+		}
+
+		article p.licence span.photo {
+			float: right;
+		}
+
+		article p.licence a {
+			color: #CBCBCB;
+			outline: none;
 		}
 
 	article h3 {

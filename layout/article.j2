@@ -89,5 +89,25 @@
 	{% block post -%}{%- endblock %}
 	{%- endmark %}
 	{%- endfilter %}
+	{% if not resource.meta.default_block %}<hr /><p class='strapline'> {% if resource.meta.profile_img %}
+		<img src='{{ media_url('img/article/profile/' + resource.meta.profile_img) }}' id='profile' />{% endif %}
+		{% block bio %}{% endblock bio %}
+	</p>{% endif %}
+	<p class='licence'>
+		Article {% if resource.meta.licence == 'cc-by-nc-sa' %}
+			<a class='cc-by-nc-sa'
+				href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>CC-BY-NC-SA</a>{% else %}
+			{{ resource.meta.license }}{% endif %}
+		<span class='photo'>{{ resource.meta.image_credit }}{% if resource.meta.image_licence == 'cc-by-nc-sa' %}
+			<a class='cc-by-nc-sa'
+				href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>CC-BY-NC-SA</a>{% elif resource.meta.image_licence == 'cc-by-nc-nd' %}
+			<a class='cc-by-nc-sa'
+				href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>CC-BY-NC-SA</a>{% elif resource.meta.image_licence == 'cc-by-nc' %}
+			<a class='cc-by-nc'
+				href='http://creativecommons.org/licenses/by-nc/3.0/'>CC-BY-NC-SA</a>{% elif resource.meta.image_licence == 'cc-by' %}
+			<a class='cc-by'
+				href='http://creativecommons.org/licenses/by/3.0/'>CC-BY</a>{% else %}
+			{{ resource.meta.image_licence }}{% endif %}</span>
+	</p>
 </article>
 {% endblock content %}
