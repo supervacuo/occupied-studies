@@ -5,7 +5,7 @@
   <meta charset="{{ resource.meta.charset }}">
 
   <title>{% block title %}{{ resource.meta.title }}{% endblock title %}</title>
-  <meta name="author" content="{{ resource.meta.author }}">
+	{% if resource.meta.author %}<meta name="author" content="{{ resource.meta.author }}">{% endif %}
 
   {% block favicons %}
   <!-- Place favicon.ico & apple-touch-icon.png
