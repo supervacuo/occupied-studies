@@ -6,6 +6,7 @@ template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.urls.UrlCleanerPlugin
     - hyde.ext.plugins.sorter.SorterPlugin
     - hyde.ext.plugins.tagger.TaggerPlugin
     - hyde.ext.plugins.syntext.SyntextPlugin
@@ -38,3 +39,8 @@ tagger:
             meta:
                 listable: false
     sorter: time
+urlcleaner:
+    index_file_names:
+        - index.html
+    strip_extensions:
+        - html
