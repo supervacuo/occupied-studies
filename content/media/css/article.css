@@ -123,6 +123,7 @@ article {
 			width: 480px;
 			z-index: 2;
 			margin: 0;
+			left: -1em;
 		}
 
 		article header h2 {
