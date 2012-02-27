@@ -181,11 +181,11 @@ article {
 		}
 
 	article p.licence {
-		margin-bottom: -1.33em;
+		margin-bottom: -16px;
 		padding: 0.5em 1em;
 		color: #CBCBCB;
 		width: 44.7em;
-		margin-left: -1.33em;
+		margin-left: -16px;
 		background-color: #252525;
 		font-size: 0.75em;
 	}
@@ -247,15 +247,17 @@ article {
 		position: absolute;
 		top: -0.45em;
 		left: -0.45em;
-		font-size: 5em;
+		font-size: 4em;
 		color: #777;
+		font-family: "Verdana";
 	}
 	article blockquote.pull:after {
 		content: "\201D";
 		position: absolute;
 		right: 0;
-		font-size: 5em;
+		font-size: 4em;
 		color: #777;
+		font-family: "Verdana";
 	}
 
 	article div.footnote {
