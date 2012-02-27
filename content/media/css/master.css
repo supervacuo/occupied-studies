@@ -34,6 +34,11 @@
 	font-style: normal;
 }
 
+/* help for FF 3.6 */
+article, footer, header {
+	display: block;
+}
+
 /* global style definitions */
 html {
 	font-size: 16px;
