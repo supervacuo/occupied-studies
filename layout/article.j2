@@ -47,6 +47,12 @@
 				}, 1000, "easeInOutQuad");
 				event.preventDefault();
 			});
+			$('#page-down a').click(function(event) {
+				$('html,body').animate({	
+					scrollTop: $('html,body').scrollTop() + $(window).height() * 0.95
+				}, 1000, "easeInOutQuad");
+				event.preventDefault();
+			});
 			$('article header h1').fitText(1.2)
 	});
 </script>
