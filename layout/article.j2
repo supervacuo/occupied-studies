@@ -99,7 +99,7 @@
 	{%- endmark %}
 	{%- endfilter %}
 	{% if not resource.meta.default_block %}<hr /><p id='strapline'> {% if resource.meta.profile_img %}
-		<img src='{{ media_url('img/article/profile/' + resource.meta.profile_img) }}' id='profile' />{% endif %}
+		<img src='{{ media_url('img/profile/thumb/' + resource.meta.profile_img) }}' id='profile' />{% endif %}
 		{% block bio %}{% endblock bio %}
 	</p>{% endif %}
 	<p class='licence'>
