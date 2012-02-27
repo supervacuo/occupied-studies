@@ -20,6 +20,7 @@ meta:
 markdown:
     extensions:
         - footnotes
+        - def_list
 sorter:
     time:
         attr:
