@@ -152,7 +152,16 @@ article {
 		hyphens: auto;
 	}
 
-	article header + p:first-letter {
+	article p.author {
+		font-style: italic;
+		text-align: right;
+	}
+
+		article p.author a {
+			color: black;
+		}
+
+	article p.author + p:first-letter {
 		font-size: 3em;
 		float: left;
 		font-family: 'HelveticaCE35ThinRegular';
@@ -169,12 +178,12 @@ article {
 		content: "\2767"; 
 	}
 
-	article p.strapline {
+	article p#strapline {
 		overflow: auto;
 		margin: 0;
 	}
 
-		article p.strapline img#profile {
+		article p#strapline img#profile {
 			float: left;
 			margin-right: 1em;
 			width: 92px;

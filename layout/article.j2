@@ -90,12 +90,15 @@
 		<h2{% if resource.meta.subtitle|length > 70 %} class='wide'{% endif %}>{{ resource.meta.subtitle }}</h2>
 		{% endif %}
 	</header>
+	{% if resource.meta.author %}<p class='author'>
+		By <a href='#strapline'>{{ resource.meta.author }}</a>, {{ resource.meta.created.strftime('%B %Y') }}
+	</p>{% endif %}
 	{% filter markdown|typogrify -%}
 	{% mark post -%}
 	{% block post -%}{%- endblock %}
 	{%- endmark %}
 	{%- endfilter %}
-	{% if not resource.meta.default_block %}<hr /><p class='strapline'> {% if resource.meta.profile_img %}
+	{% if not resource.meta.default_block %}<hr /><p id='strapline'> {% if resource.meta.profile_img %}
 		<img src='{{ media_url('img/article/profile/' + resource.meta.profile_img) }}' id='profile' />{% endif %}
 		{% block bio %}{% endblock bio %}
 	</p>{% endif %}
