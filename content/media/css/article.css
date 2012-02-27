@@ -284,6 +284,15 @@ article {
 			margin: 0.84em 0;
 		}
 
+/* mainly for "about" page */
 article dt {
 	font-weight: bold;
 }
+
+article dd {
+	margin-left: 2em;
+}
+
+	article dd ol {
+		padding: 0;
+	}
