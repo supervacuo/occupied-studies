@@ -273,3 +273,7 @@ article {
 			line-height: inherit;
 			margin: 0.84em 0;
 		}
+
+article dt {
+	font-weight: bold;
+}
