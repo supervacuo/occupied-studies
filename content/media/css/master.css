@@ -357,7 +357,7 @@ div#history {
 	}
 
 	div#history div.article.first {
-		top: 40%;
+		top: 52%;
 		left: 48%;
 	}
 
@@ -387,6 +387,14 @@ div#struggle {
 	-moz-box-shadow: 0px 0px 5px 2px #333;
 	box-shadow: 0px 0px 5px 2px #333;
 }
+
+	div#struggle div.article {
+		overflow: visible;
+	}
+	
+		div#struggle div.article h3 {
+			white-space: nowrap;
+		}
 
 footer {
 	z-index: 0;

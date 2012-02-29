@@ -60,9 +60,9 @@
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>History</h2>
 		<img id='timeline' src='{{ media_url('img/timeline.png') }}' alt='Occupy Wall Street timeline' />
-		{% for resource in site.tagger.tags.history.resources|sort(attribute='meta.created',reverse=true) %}
-		{{ render_post_tile(resource, loop.cycle('first', 'right')) }}
-		{% endfor %}
+		{% with resource=site.tagger.tags.history.resources|sort(attribute='meta.created', reverse=true)|first %}
+		{{ render_post_tile(resource, 'first') }}
+		{% endwith %}
 		<p class='next'><a href='#education'>Education &darr;</a></p>
 	</div>
 	<div id='education'>
