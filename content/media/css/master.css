@@ -457,12 +457,13 @@ footer {
 		}
 
 		footer nav#social_media a {
-			height: 32px;
-			width: 32px;
+			height: 38px;
+			width: 38px;
 			display: block;
 			text-indent: -9999px;
 			background: transparent none no-repeat scroll 0 0;
 			outline: none;
+			margin-left: 0.5em;
 		}
 
 		footer nav#social_media a:hover {
@@ -474,9 +475,9 @@ footer {
 		}
 
 		footer nav#social_media a#facebook {
-			background-image: url(../img/icons/black-08.png);
+			background-image: url(../img/icons/facebook.png);
 		}
 
 		footer nav#social_media a#twitter {
-			background-image: url(../img/icons/black-13.png);
+			background-image: url(../img/icons/twitter.png);
 		}
