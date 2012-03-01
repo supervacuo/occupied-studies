@@ -187,6 +187,7 @@ article {
 
 	article > hr:before {
 		content: "\2767"; 
+		font-family: 'DejaVuSansBook';
 	}
 
 	article p#strapline {

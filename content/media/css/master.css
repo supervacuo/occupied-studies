@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'DejaVuSansBook';
+	src: url('../fnt/dejavusans-webfont.eot');
+	src: url('../fnt/dejavusans-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fnt/dejavusans-webfont.woff') format('woff'),
+		url('../fnt/dejavusans-webfont.ttf') format('truetype'),
+		url('../fnt/dejavusans-webfont.svg#DejaVuSansBook') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* web font: Helvetica Neue CE 35 Thin */
 @font-face {
 	font-family: 'HelveticaCE35ThinRegular';
@@ -438,6 +449,7 @@ footer {
 		footer ul li:before {
 			content: "\2767"; 
 			padding-right: 1em;
+			font-family: 'DejaVuSansBook';
 		}
 
 			footer ul li a {
