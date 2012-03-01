@@ -89,6 +89,10 @@
 		{% if resource.meta.subtitle %}
 		<h2{% if resource.meta.subtitle|length > 70 %} class='wide'{% endif %}>{{ resource.meta.subtitle }}</h2>
 		{% endif %}
+		{{ resource.meta.image_licence[0]|pprint }}
+		{% if resource.meta.image_licence[0] == '\xa9' %}
+		<span id='extra-copyright'>{{ resource.meta.image_credit }} {{ resource.meta.image_licence }}</span>
+		{% endif %}
 	</header>
 	{% if resource.meta.author %}<p class='author'>
 		By <a href='#strapline'>{{ resource.meta.author }}</a>, {{ resource.meta.created.strftime('%B %Y') }}
