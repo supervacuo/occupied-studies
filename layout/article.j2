@@ -85,7 +85,7 @@
 		</ul>
 	</nav>
 	<header style='background-image: url({{ media_url('img/article/' + resource.meta.image) }});'>
-		<h1>{{ resource.meta.title }}</h1>
+		<h1>{{ resource.meta.title|widont }}</h1>
 		{% if resource.meta.subtitle %}
 		<h2{% if resource.meta.subtitle|length > 70 %} class='wide'{% endif %}>{{ resource.meta.subtitle }}</h2>
 		{% endif %}
