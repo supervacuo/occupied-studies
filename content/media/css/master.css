@@ -131,6 +131,8 @@ blockquote.preamble {
 	margin: 0.75em auto;
 	font-family: 'HelveticaCE35ThinRegular', 'Helvetica', 'Arial', sans-serif;
 	font-size: 1.25em;
+	text-align: justify;
+	text-justify: distribute;
 }
 
 	blockquote.preamble span {
@@ -193,6 +195,8 @@ div.article {
 
 	div.article p.byline + p {
 		margin-top: 0;
+		text-align: justify;
+		text-justify: distribute;
 	}
 
 	div.article p.read_more {

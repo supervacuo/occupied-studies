@@ -10,12 +10,6 @@
 <script type="text/javascript" src="{{ media_url('js/jquery.fittext.js') }}"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-			$('article p').each(function() {
-				$(this).addClass('sweet-justice');
-			});
-			$('article > ol > li, article > ul > li').each(function() {
-				$(this).addClass('sweet-justice');
-			});
 			$(document.documentElement).keydown(function (event) {
 				if (event.keyCode == 32 || event.keyCode == 34) {
 					// pressed space or pgdn
@@ -97,7 +91,7 @@
 	{% if resource.meta.author %}<p class='author'>
 		By <a href='#strapline'>{{ resource.meta.author }}</a>, {{ resource.meta.created.strftime('%B %Y') }}
 	</p>{% endif %}
-	{% filter markdown|typogrify -%}
+	{% filter markdown|typogrify|justice -%}
 	{% mark post -%}
 	{% block post -%}{%- endblock %}
 	{%- endmark %}

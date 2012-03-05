@@ -161,6 +161,8 @@ article {
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;
+		text-align: justify;
+		text-justify: distribute;
 	}
 
 	article p.author {
@@ -178,6 +180,11 @@ article {
 		font-family: 'HelveticaCE35ThinRegular';
 		margin: 0.05em 0.05em 0 0;
 		line-height: 0.8em;
+	}
+
+	article > ol > li, article > ul > li {
+		text-align: justify;
+		text-justify: distribute;
 	}
 	
 	article > hr {

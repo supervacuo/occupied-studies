@@ -10,7 +10,6 @@
 					scrollTop: $(destination).offset().top + 1
 				}, 1000, "easeInOutQuad");
 			});
-			$('div.article p:not([class~="byline"])').addClass('sweet-justice');
 		});
 	</script>
 {% endblock js %}
@@ -32,11 +31,8 @@
 	<div id='strategy'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>Strategy</h2>
-		<blockquote class='preamble sweet-justice'>
-			What this movement is about is that even the democratic institutions we do
-			have now have been corrupted by big money, and in the same way our
-			movement would be corrupted if we were subsumed into that same political
-			system. We have to maintain the integrity of this experiment.
+		<blockquote class='preamble'>
+			{{ "What this movement is about is that even the democratic institutions we do have now have been corrupted by big money, and in the same way our movement would be corrupted if we were subsumed into that same political system. We have to maintain the integrity of this experiment."|justice }}
 			<span>&mdash; David Graeber</span>
 		</blockquote>
 		<hr class='lock' />
@@ -76,13 +72,8 @@
 	<div id='struggle'>
 		<p class='top'><a href='#index'>&uarr; Top</a></p>
 		<h2>Struggle</h2>
-		<blockquote class='preamble sweet-justice'>
-			No chaos resulted from the actions of people without leadership and
-			without previously formulated program&hellip;instead of mob rule there
-			appeared immediately the same organization which for more than a hundred
-			years now has emerged whenever the people have been permitted for a few
-			days, or a few weeks or months, to follow their own political devices
-			without a government (or a party program) imposed from above. 
+		<blockquote class='preamble'>
+			{{ "No chaos resulted from the actions of people without leadership and without previously formulated program&hellip;instead of mob rule there appeared immediately the same organization which for more than a hundred years now has emerged whenever the people have been permitted for a few days, or a few weeks or months, to follow their own political devices without a government (or a party program) imposed from above."|justice }}
 			<span>&mdash; Hannah Arendt</span>
 		</blockquote>
 		<hr class='gear' />
