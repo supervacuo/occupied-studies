@@ -157,6 +157,10 @@ article {
 			font-size: 0.6em;
 		}
 
+			article header span#extra-copyright a {
+				color: black;
+			}
+
 	article p {
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
