@@ -5,20 +5,10 @@
     - ~/Projects/ansible/vars/defaults.yml
     - vars.yml
   tasks:
-   - name: yum | virtualenv | install
-     yum: name=python-virtualenv state=installed
-
-   - name: yum | gcc | install
-     yum: name=gcc state=installed
-
-   - name: project | root | create
-     file: path={{ project.root }} state=directory owner=nginx group=nginx
-
    - name: project | checkout
      git: >
        repo={{ project.repo }}
        dest={{ project.root }}/src
-     sudo_user: nginx
 
    - name: project | root | check permissions
      file:
@@ -39,3 +29,8 @@
        "{{ virtualenv }}/bin/hyde gen -d {{ project.root }}/html"
      args:
        chdir: "{{ project.root }}/src"
+     sudo_user: nginx
+
+   - name: selinux | restorecon
+     command: restorecon -R {{ selfoss.root }}
+     when: ansible_selinux.mode == "enforcing"

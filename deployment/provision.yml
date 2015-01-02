@@ -1,0 +1,23 @@
+---
+- hosts: all
+  sudo: True
+  vars_files:
+    - ~/Projects/ansible/vars/defaults.yml
+    - vars.yml
+  roles:
+    - nginx 
+  tasks:
+   - name: yum | virtualenv | install
+     yum: name=python-virtualenv state=installed
+
+   - name: yum | gcc | install
+     yum: name=gcc state=installed
+
+   - name: project | root | create
+     file: path={{ project.root }} state=directory owner=nginx group=nginx
+
+   - name: nginx | config | copy
+     template:
+       src: "etc%nginx%conf.d%occupiedstuies.conf" 
+       dest: "/etc/nginx/conf.d/occupiedstudies.conf"
+     notify: restart nginx
