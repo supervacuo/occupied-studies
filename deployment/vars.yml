@@ -1,0 +1,8 @@
+---
+project:
+  name: occupied_studies
+  root: /var/www/occupiedstudies
+  repo: https://github.com/supervacuo/occupied-studies.git
+  domain: occupiedstudies.supervacuo.com
+
+virtualenv: "{{ project.root }}/venv"
