@@ -33,4 +33,4 @@
 
    - name: selinux | restorecon
      command: restorecon -R {{ selfoss.root }}
-     when: ansible_selinux.mode == "enforcing"
+     when: ansible_selinux.status == "enabled"
