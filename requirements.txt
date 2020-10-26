@@ -5,7 +5,6 @@ PyYAML==3.10
 PyHyphen==2.0.5
 Pygments==1.6
 argparse==1.2.1
-commando==0.3.4
 django-softhyphen==0.14
 hyde==0.8.8
 smartypants==1.6.0.3
