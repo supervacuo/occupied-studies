@@ -1,5 +1,5 @@
 BeautifulSoup==3.2.1
-Jinja2==2.7.1
+Jinja2==2.10.1
 Markdown==2.3.1
 PyYAML==3.10
 PyHyphen==2.0.5
