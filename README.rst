@@ -52,7 +52,7 @@ Bugs
 * Javascript-assisted navigation only works well in Firefox.
 
 Please report any other problems using the Github "Issues" system, or directly
-by e-mail to Carl van Tonder <carl@supervacuo.com>.
+by e-mail to website@occupiedstudies.org.
 
 License
 ---------------------------------------

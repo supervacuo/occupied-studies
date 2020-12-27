@@ -1,8 +1,0 @@
----
-project:
-  name: occupied_studies
-  root: /var/www/occupiedstudies
-  repo: https://github.com/supervacuo/occupied-studies.git
-  domain: occupiedstudies.org
-
-virtualenv: "{{ project.root }}/venv"
