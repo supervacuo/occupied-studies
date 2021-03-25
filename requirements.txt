@@ -1,7 +1,7 @@
 BeautifulSoup==3.2.1
 Jinja2==2.7.1
 Markdown==2.3.1
-PyYAML==3.10
+PyYAML==5.4
 PyHyphen==2.0.5
 Pygments==1.6
 argparse==1.2.1
