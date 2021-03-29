@@ -3,7 +3,7 @@ Jinja2==2.7.1
 Markdown==2.3.1
 PyYAML==3.10
 PyHyphen==2.0.5
-Pygments==1.6
+Pygments==2.7.4
 argparse==1.2.1
 django-softhyphen==0.14
 hyde==0.8.8
